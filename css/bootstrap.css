@@ -11,7 +11,6 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-  height:100%;
   padding: 0;
   margin: 0;
 }
@@ -3006,8 +3005,8 @@ select[multiple].form-group-lg .form-control {
       -ms-user-select: none;
           user-select: none;
   background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
+  border: 0px solid transparent;
+  border-radius: 0px;
 }
 .btn:focus,
 .btn:active:focus,
@@ -4106,7 +4105,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-collapse.collapse {
     text-align: center;
     display: block !important;
-    height: auto !important;
+    height: 50 !important;
     padding-bottom: 0;
     overflow: visible !important;
   }
@@ -4201,10 +4200,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-toggle {
   position: relative;
-  float: right;
+  width:100%;
+  float: none;
   padding: 9px 10px;
   margin-top: 8px;
-  margin-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 8px;
   background-color: transparent;
   background-image: none;
@@ -6366,6 +6367,11 @@ button.close {
 }
 .center-block {
   display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.center-block-toggle {
+  text-align: center;
   margin-right: auto;
   margin-left: auto;
 }

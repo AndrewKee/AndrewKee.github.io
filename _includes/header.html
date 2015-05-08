@@ -25,24 +25,27 @@ ript>
   </head>
 
   <body>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <nav class="navbar navbar-default navbar-fixed-top center" role="navigation">
-      <!-- <div class="container-fluid"> -->
-<!--       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a> -->
-        <div class="navbar-inner">
+      <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target="#collapsed-navigation"> 
+        <span class="sr-only"></span>
+        <span class="icon-bar center-block"></span>
+        <span class="icon-bar center-block"></span>
+        <span class="icon-bar center-block"></span>
+      </button>
+      <div class="container-fluid container">
+        <div class="navbar-inner navbar-collapse collapse" id="collapsed-navigation">
           <ul class="nav navbar-nav center">  
-            <li><a href="/"><img height="20" src="/Design/Labels/ABOUT.png"></a></li>
-            <li><a href="/"><img height="20" src="/Design/Labels/PROJECTS.png"></a></li>
-            <li class="active"><a href="#"><img height="40" src="/Design/AK_Logo/AK_8.png"></a></li>
-            <li><a href="/"><img height="20" src="/Design/Labels/RESUME.png"></a></li>
-            <li><a href="/"><img height="20" src="/Design/Labels/CONTACT.png"></a></li>
+            <li id="about"><a href="/about"><img height="20" src="/Design/Labels/ABOUT.png"></a></li>
+            <li id="projects"><a href="/projects"><img height="20" src="/Design/Labels/PROJECTS.png"></a></li>
+            <li id="logo"><a href="/"><img height="40" src="/Design/AK_Logo/AK_8.png"></a></li>
+            <li id="resume"><a href="/resume"><img height="20" src="/Design/Labels/RESUME.png"></a></li>
+            <li id="contact"><a href="/contact"><img height="20" src="/Design/Labels/CONTACT.png"></a></li>
           </ul>
         </div>
-      <!-- </div> -->
+      </div>
     </nav>
 
     <div class="container" height="80%">
