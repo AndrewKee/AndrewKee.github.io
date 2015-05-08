@@ -1,0 +1,9 @@
+name: "AndrewKee"
+description: "Andrew Kee's very own jekyll theme"
+
+url: "http://AndrewKee.me"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty
