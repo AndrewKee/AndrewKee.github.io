@@ -4,13 +4,14 @@
   <script type="text/javascript" src="all.js"></script>
   <head>
     <title>Rotem Analysis</title>
+	  <style>
+		.number {
+			type:number;
+			width:20%;
+		}
+	</style>
   </head>
-<style>
-	input.number {
-		type=number;
-		size=10
-	}
-</style>
+
 
 
   <h1 style=text-align:center> Quick Rotem Analysis </h1>
@@ -18,7 +19,7 @@
 		  <h2 style=text-align:center> Extem Inputs </h2>
 		  <body>
 		  	<label for="extem_CT">EXTEM CT</label>
-		  	<input class="number" for="CT" placeholder="EXTEM CT" id="extem_CT"> </input> 
+		  	<input class="number" placeholder="EXTEM CT" id="extem_CT"> </input> 
 		  	<input class="number" placeholder="EXTEM CT Lower" id="extem_CT_bound_l"> </input> 
 		  	<input class="number" placeholder="EXTEM CT Upper" id="extem_CT_bound_h"> </input>
 		  	<br>
@@ -73,7 +74,7 @@
 	  </section>
 	  <br>
 	  <br>
-	  
+
 	  <section style=text-align:center>
 	  	
 	  	<button onclick="runAnalysis()"> Analyze! </button>
