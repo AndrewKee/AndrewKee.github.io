@@ -1,9 +1,76 @@
 <!doctype html>
 <html>
+  <script type="text/javascript" src="all.js"></script>
   <head>
-    <title>This is the title of the webpage!</title>
+    <title>Rotem Analysis</title>
   </head>
+  <h1 style=text-align:center> Quick Rotem Analysis </h1>
+	  <section>
+		  <h2> Extem Inputs </h2>
+		  <body>
+		  	<input id="extem_CT"> CT </input> <input id="extem_CT_bound_l"> </input> <input id="extem_CT_bound_h"> </input><br>
+		  	<input id="extem_alpha"> Alpha </input> <input id="extem_alpha_bound_l">  </input>  <input id="extem_alpha_bound_h">  </input><br>
+		  	<input id="extem_MCF"> MCF </input> <input id="extem_MCF_bound_l">  </input> <input id="extem_MCF_bound_h">  </input><br>
+		  	<input id="extem_ML"> ML </input> <input id="extem_ML_bound_l">  </input> <input id="extem_ML_bound_h">  </input><br>
+
+		  	
+		  </body>
+	  </section>
+
+<!-- 	  <section>
+		  <h2> Intem Inputs </h2>
+		  <body>
+		  	<input id="intem_CT"> CT </input><br>
+		  	<input id="intem_A5"> A5 </input> <br>
+		  	<input id="intem_A10"> A10 </input><br>
+		  	<input id="intem_MCF"> MCF </input><br>
+		  	<input id="intem_ML"> ML </input><br>
+		  	<input id="intem_LI60"> LI60 </input><br>
+
+		  	<button onclick="myFunction()"> Analyze! </button>
+		  </body>
+	  </section>
+ -->
+	  <section>
+		  <h2> Fibtem Inputs </h2>
+		  <body>
+		  	<input id="fibtem_A10"> A10 </input> <input id="fibtem_A10_bound_l">  </input><input id="fibtem_A10_bound_h">  </input><br>
+		  	<input id="fibtem_MCF"> MCF </input><input id="fibtem_MCF_bound_l">  </input><input id="fibtem_MCF_bound_h">  </input><br>
+
+
+		  </body>
+	  </section>
+	  <button onclick="runAnalysis()"> Analyze! </button>
+	  <!-- <section>
+		  <h2> Aptem Inputs </h2>
+		  <body>
+		  	<input id="aptem_CT"> CT </input><br>
+		  	<input id="aptem_A5"> A5 </input> <br>
+		  	<input id="aptem_A10"> A10 </input><br>
+		  	<input id="aptem_MCF"> MCF </input><br>
+		  	<input id="aptem_ML"> ML </input><br>
+		  	<input id="aptem_LI60"> LI60 </input><br>
+
+		  	<button onclick="myFunction()"> Analyze! </button>
+		  </body>
+	  </section>
+
+	  <section>
+		  <h2> Heptem Inputs </h2>
+		  <body>
+		  	<input id="heptem_CT"> CT </input><br>
+		  	<input id="heptem_A5"> A5 </input> <br>
+		  	<input id="heptem_A10"> A10 </input><br>
+		  	<input id="heptem_MCF"> MCF </input><br>
+		  	<input id="heptem_ML"> ML </input><br>
+		  	<input id="heptem_LI60"> LI60 </input><br>
+
+		  	<button onclick="myFunction()"> Analyze! </button>
+		  </body>
+	  </section> -->
   <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+  	<p id="output"> here's the output </p>
   </body>
+
+
 </html>
