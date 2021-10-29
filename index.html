@@ -1,17 +1,42 @@
 <!doctype html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="all.js"></script>
   <head>
     <title>Rotem Analysis</title>
   </head>
+<style>
+	input.number {
+		type=number;
+		size=10
+	}
+</style>
+
+
   <h1 style=text-align:center> Quick Rotem Analysis </h1>
-	  <section>
-		  <h2> Extem Inputs </h2>
+	  <section style=text-align:center>
+		  <h2 style=text-align:center> Extem Inputs </h2>
 		  <body>
-		  	<input id="extem_CT"> CT </input> <input id="extem_CT_bound_l"> </input> <input id="extem_CT_bound_h"> </input><br>
-		  	<input id="extem_alpha"> Alpha </input> <input id="extem_alpha_bound_l">  </input>  <input id="extem_alpha_bound_h">  </input><br>
-		  	<input id="extem_MCF"> MCF </input> <input id="extem_MCF_bound_l">  </input> <input id="extem_MCF_bound_h">  </input><br>
-		  	<input id="extem_ML"> ML </input> <input id="extem_ML_bound_l">  </input> <input id="extem_ML_bound_h">  </input><br>
+		  	<label for="extem_CT">EXTEM CT</label>
+		  	<input class="number" for="CT" placeholder="EXTEM CT" id="extem_CT"> </input> 
+		  	<input class="number" placeholder="EXTEM CT Lower" id="extem_CT_bound_l"> </input> 
+		  	<input class="number" placeholder="EXTEM CT Upper" id="extem_CT_bound_h"> </input>
+		  	<br>
+		  	<label for="extem_alpha">EXTEM Alpha</label>
+		  	<input class="number" placeholder="EXTEM Alpha" id="extem_alpha"> </input> 
+		  	<input class="number" placeholder="EXTEM Alpha Lower" id="extem_alpha_bound_l">  </input>  
+		  	<input class="number" placeholder="EXTEM Alpha Upper" id="extem_alpha_bound_h">  </input>
+		  	<br>
+		  	<label style=width:50px for="extem_MCF">EXTEM MCF</label>
+		  	<input class="number" placeholder="EXTEM MCF" id="extem_MCF"> </input> 
+		  	<input class="number" placeholder="EXTEM MCF Lower"id="extem_MCF_bound_l">  </input> 
+		  	<input class="number" placeholder="EXTEM MCF Upper" id="extem_MCF_bound_h">  </input>
+		  	<br>
+		  	<label style=width:50px for="extem_ML">EXTEM ML</label>
+		  	<input class="number" placeholder="EXTEM ML" id="extem_ML"> </input> 
+		  	<input class="number" placeholder="EXTEM ML Lower" id="extem_ML_bound_l">  </input> 
+		  	<input class="number" placeholder="EXTEM ML Upper" id="extem_ML_bound_h">  </input>
+		  	<br>
 
 		  	
 		  </body>
@@ -31,16 +56,28 @@
 		  </body>
 	  </section>
  -->
-	  <section>
-		  <h2> Fibtem Inputs </h2>
+	  <section style=text-align:center>
+		  <h2 style=text-align:center> Fibtem Inputs </h2>
 		  <body>
-		  	<input id="fibtem_A10"> A10 </input> <input id="fibtem_A10_bound_l">  </input><input id="fibtem_A10_bound_h">  </input><br>
-		  	<input id="fibtem_MCF"> MCF </input><input id="fibtem_MCF_bound_l">  </input><input id="fibtem_MCF_bound_h">  </input><br>
+		  	<label for="fibtem_a10">FIBTEM A10</label>
+		  	<input class="number" placeholder="FIBTEM A10" id="fibtem_A10"> </input> 
+		  	<br>
+		  	<label for="fibtem_MCF">FIBTEM MCF</label>
+		  	<input class="number" placeholder="FIBTEM MCF" id="fibtem_MCF"> </input>
+		  	<input class="number" placeholder="FIBTEM MCF Lower" id="fibtem_MCF_bound_l">  </input>
+		  	<input class="number" placeholder="FIBTEM MCF Upper" id="fibtem_MCF_bound_h">  </input>
+		  	<br>
 
 
 		  </body>
 	  </section>
-	  <button onclick="runAnalysis()"> Analyze! </button>
+	  <br>
+	  <br>
+	  
+	  <section style=text-align:center>
+	  	
+	  	<button onclick="runAnalysis()"> Analyze! </button>
+	  </section>
 	  <!-- <section>
 		  <h2> Aptem Inputs </h2>
 		  <body>
