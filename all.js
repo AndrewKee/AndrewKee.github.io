@@ -4,19 +4,19 @@ function runAnalysis() {
 	extem_CT = parseFloat(document.getElementById("extem_CT").value);
 	extem_alpha = parseFloat(document.getElementById("extem_alpha").value);
 	extem_MCF = parseFloat(document.getElementById("extem_MCF").value);
-	extem_ML = parseFloat(document.getElementById("extem_ML").value);
+	// extem_ML = parseFloat(document.getElementById("extem_ML").value);
 
 	// Get extem lower bounds
 	extem_CT_l = parseFloat(document.getElementById("extem_CT_bound_l").value);
 	extem_alpha_l = parseFloat(document.getElementById("extem_alpha_bound_l").value);
 	extem_MCF_l = parseFloat(document.getElementById("extem_MCF_bound_l").value);
-	extem_ML_l = parseFloat(document.getElementById("extem_ML_bound_l").value);
+	// extem_ML_l = parseFloat(document.getElementById("extem_ML_bound_l").value);
 
 	// Get extem upper bounds
 	extem_CT_h = parseFloat(document.getElementById("extem_CT_bound_h").value);
 	extem_alpha_h = parseFloat(document.getElementById("extem_alpha_bound_h").value);
 	extem_MCF_h = parseFloat(document.getElementById("extem_MCF_bound_h").value);
-	extem_ML_h = parseFloat(document.getElementById("extem_ML_bound_h").value);
+	// extem_ML_h = parseFloat(document.getElementById("extem_ML_bound_h").value);
 
 
 	// Get fibtem inputs
@@ -24,11 +24,9 @@ function runAnalysis() {
 	fibtem_MCF = parseFloat(document.getElementById("fibtem_MCF").value);
 
 	// Get fibtem lower bounds
-	fibtem_A10_l = parseFloat(document.getElementById("fibtem_A10_bound_l").value);
 	fibtem_MCF_l = parseFloat(document.getElementById("fibtem_MCF_bound_l").value);
 
 	// Get fibtem upper bounds
-	fibtem_A10_h = parseFloat(document.getElementById("fibtem_A10_bound_h").value);
 	fibtem_MCF_h = parseFloat(document.getElementById("fibtem_MCF_bound_h").value);
 
 
