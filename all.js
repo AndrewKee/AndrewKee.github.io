@@ -66,3 +66,31 @@ function runAnalysis() {
 	document.getElementById("output").innerHTML = recommendation
 }
 
+function editBounds(){
+	if (document.getElementById('edit_inputs').checked) 
+  {
+      document.getElementById("extem_CT_bound_l").disabled = false;
+      document.getElementById("extem_alpha_bound_l").disabled = false;
+      document.getElementById("extem_MCF_bound_l").disabled = false;
+
+      document.getElementById("extem_CT_bound_h").disabled = false;
+      document.getElementById("extem_alpha_bound_h").disabled = false;
+      document.getElementById("extem_MCF_bound_h").disabled = false;
+
+      document.getElementById("fibtem_MCF_bound_l").disabled = false;
+      document.getElementById("fibtem_MCF_bound_h").disabled = false;
+
+  } else {
+      document.getElementById("extem_CT_bound_l").disabled = true;
+      document.getElementById("extem_alpha_bound_l").disabled = true;
+      document.getElementById("extem_MCF_bound_l").disabled = true;
+
+      document.getElementById("extem_CT_bound_h").disabled = true;
+      document.getElementById("extem_alpha_bound_h").disabled = true;
+      document.getElementById("extem_MCF_bound_h").disabled = true;
+
+      document.getElementById("fibtem_MCF_bound_l").disabled = true;
+      document.getElementById("fibtem_MCF_bound_h").disabled = true;
+
+  }
+}

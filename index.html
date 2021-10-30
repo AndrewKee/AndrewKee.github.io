@@ -19,18 +19,18 @@
 		  <body>
 		  	<label for="extem_CT">EXTEM CT</label>
 		  	<input class="number" type=number pattern="\d*" placeholder="EXTEM CT" id="extem_CT"> </input> 
-		  	<input class="number" type=number pattern="\d*" placeholder="CT Lower" id="extem_CT_bound_l"> </input> 
-		  	<input class="number" type=number pattern="\d*" placeholder="CT Upper" id="extem_CT_bound_h"> </input>
+		  	<input class="number" type=number pattern="\d*" placeholder="CT Lower" id="extem_CT_bound_l" value="43" disabled> </input> 
+		  	<input class="number" type=number pattern="\d*" placeholder="CT Upper" id="extem_CT_bound_h" value="82" disabled> </input>
 		  	<br>
 		  	<label for="extem_alpha">EXTEM Alpha</label>
 		  	<input class="number" type=number pattern="\d*" placeholder="EXTEM Alpha" id="extem_alpha"> </input> 
-		  	<input class="number" type=number pattern="\d*" placeholder="Alpha Lower" id="extem_alpha_bound_l">  </input>  
-		  	<input class="number" type=number pattern="\d*" placeholder="Alpha Upper" id="extem_alpha_bound_h">  </input>
+		  	<input class="number" type=number pattern="\d*" placeholder="Alpha Lower" id="extem_alpha_bound_l" value="65" disabled>  </input>  
+		  	<input class="number" type=number pattern="\d*" placeholder="Alpha Upper" id="extem_alpha_bound_h" value="80" disabled>  </input>
 		  	<br>
 		  	<label style=width:50px for="extem_MCF">EXTEM MCF</label>
 		  	<input class="number" type=number pattern="\d*" placeholder="EXTEM MCF" id="extem_MCF"> </input> 
-		  	<input class="number" type=number pattern="\d*" placeholder="MCF Lower"id="extem_MCF_bound_l">  </input> 
-		  	<input class="number" type=number pattern="\d*" placeholder="MCF Upper" id="extem_MCF_bound_h">  </input>
+		  	<input class="number" type=number pattern="\d*" placeholder="MCF Lower"id="extem_MCF_bound_l" value="52" disabled>  </input> 
+		  	<input class="number" type=number pattern="\d*" placeholder="MCF Upper" id="extem_MCF_bound_h" value="70" disabled>  </input>
 		  	<br>
 		  	<!-- <label style=width:50px for="extem_ML">EXTEM ML</label>
 		  	<input class="number" type=number pattern="\d*"placeholder="EXTEM ML" id="extem_ML"> </input> 
@@ -64,8 +64,8 @@
 		  	<br>
 		  	<label for="fibtem_MCF">FIBTEM MCF</label>
 		  	<input class="number" type=number pattern="\d*" placeholder="FIBTEM MCF" id="fibtem_MCF"> </input>
-		  	<input class="number" type=number pattern="\d*" placeholder="MCF Lower" id="fibtem_MCF_bound_l">  </input>
-		  	<input class="number" type=number pattern="\d*" placeholder="MCF Upper" id="fibtem_MCF_bound_h">  </input>
+		  	<input class="number" type=number pattern="\d*" placeholder="MCF Lower" id="fibtem_MCF_bound_l" value="7" disabled>  </input>
+		  	<input class="number" type=number pattern="\d*" placeholder="MCF Upper" id="fibtem_MCF_bound_h" value="24" disabled></input>
 		  	<br>
 
 
@@ -75,7 +75,8 @@
 	  <br>
 
 	  <section style=text-align:center>
-	  	
+	  	<input type="checkbox" id="edit_inputs" onclick="editBounds()"> 
+	  	<label for="edit_inputs"> Edit Upper and Lower Bounds </label><br>
 	  	<button onclick="runAnalysis()"> Analyze! </button>
 	  </section>
 	  <!-- <section>
