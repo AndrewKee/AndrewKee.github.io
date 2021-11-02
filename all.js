@@ -171,19 +171,28 @@ function runSimpleAnalysis(input_button){
 		if(deets[1] == "CT"){
 			x = document.getElementsByClassName("E_CT");
 			for (let item of x) {
-			    document.getElementById(item.id).classList.remove("pressed_inputs");
+				if(document.getElementById(item.id).classList.contains("pressed_inputs")){
+				    document.getElementById(item.id).classList.remove("pressed_inputs");
+				    document.getElementById(item.id).classList.add("unpressed");
+				}
 			}
 		}
 		else if(deets[1] == "Alpha"){
 			x = document.getElementsByClassName("E_Alpha");
 			for (let item of x) {
-			    document.getElementById(item.id).classList.remove("pressed_inputs");
+			    if(document.getElementById(item.id).classList.contains("pressed_inputs")){
+				    document.getElementById(item.id).classList.remove("pressed_inputs");
+				    document.getElementById(item.id).classList.add("unpressed");
+				}
 			}
 		}
 		else if(deets[1] == "MCF"){
 			x = document.getElementsByClassName("E_MCF");
 			for (let item of x) {
-			    document.getElementById(item.id).classList.remove("pressed_inputs")
+			    if(document.getElementById(item.id).classList.contains("pressed_inputs")){
+				    document.getElementById(item.id).classList.remove("pressed_inputs");
+				    document.getElementById(item.id).classList.add("unpressed");
+				}
 			}
 		}
 	}
@@ -191,17 +200,23 @@ function runSimpleAnalysis(input_button){
 		if(deets[1] == "A10"){
 			x = document.getElementsByClassName("F_A10");
 			for (let item of x) {
-			    document.getElementById(item.id).classList.remove("pressed_inputs");
+			    if(document.getElementById(item.id).classList.contains("pressed_inputs")){
+				    document.getElementById(item.id).classList.remove("pressed_inputs");
+				    document.getElementById(item.id).classList.add("unpressed");
+				}
 			}
 		}
 		else if(deets[1] == "MCF"){
 			x = document.getElementsByClassName("F_MCF");
 			for (let item of x) {
-			    document.getElementById(item.id).classList.remove("pressed_inputs");
+			    if(document.getElementById(item.id).classList.contains("pressed_inputs")){
+				    document.getElementById(item.id).classList.remove("pressed_inputs");
+				    document.getElementById(item.id).classList.add("unpressed");
+				}
 			}
 		}
 	}
-	document.getElementById(input_button).classList.remove("styled");
+	document.getElementById(input_button).classList.remove("unpressed");
 	document.getElementById(input_button).classList.add("pressed_inputs");
 
 
@@ -234,18 +249,55 @@ function runSimpleAnalysis(input_button){
 
 		// if(fibtem_A10 <= 18){
 		if(document.getElementById("F_A10_WNL").classList.contains("pressed_inputs")){
-			recommendation += "If actively bleeding, Give Cryoprecipitate <br>";
+			recommendation += "If actively bleeding, give Cryoprecipitate <br>";
 		}	
 		// if(fibtem_A10 <= 9){
-		if(document.getElementById("F_A10_low").classList.contains("pressed_inputs")){	
-			recommendation +=  "If no active bleeding, give Cryoprecipitate <br>";
+		if(document.getElementById("F_A10_low").classList.contains("pressed_inputs") || document.getElementById("F_A10_WNL").classList.contains("pressed_inputs")){	
+			recommendation +=  "If not active bleeding, give Cryoprecipitate <br>";
 		}
 	}
 	document.getElementById("output").innerHTML = recommendation;
 }
 
 
-
+function reset(){
+	x = document.getElementsByClassName("E_CT");
+	for (let item of x) {
+		if(document.getElementById(item.id).classList.contains("pressed_inputs")){
+		    document.getElementById(item.id).classList.remove("pressed_inputs");
+		    document.getElementById(item.id).classList.add("unpressed");
+		}
+	}
+	x = document.getElementsByClassName("E_Alpha");
+	for (let item of x) {
+	    if(document.getElementById(item.id).classList.contains("pressed_inputs")){
+		    document.getElementById(item.id).classList.remove("pressed_inputs");
+		    document.getElementById(item.id).classList.add("unpressed");
+		}
+	}
+	x = document.getElementsByClassName("E_MCF");
+	for (let item of x) {
+	    if(document.getElementById(item.id).classList.contains("pressed_inputs")){
+		    document.getElementById(item.id).classList.remove("pressed_inputs");
+		    document.getElementById(item.id).classList.add("unpressed");
+		}
+	}
+	x = document.getElementsByClassName("F_A10");
+	for (let item of x) {
+	    if(document.getElementById(item.id).classList.contains("pressed_inputs")){
+		    document.getElementById(item.id).classList.remove("pressed_inputs");
+		    document.getElementById(item.id).classList.add("unpressed");
+		}
+	}
+	x = document.getElementsByClassName("F_MCF");
+	for (let item of x) {
+	    if(document.getElementById(item.id).classList.contains("pressed_inputs")){
+		    document.getElementById(item.id).classList.remove("pressed_inputs");
+		    document.getElementById(item.id).classList.add("unpressed");
+		}
+	}
+	document.getElementById("output").innerHTML = "";
+}
 
 
 

@@ -138,7 +138,7 @@
 		<div id="fibtemSimple">
 			<section style=text-align:center>
 			  	<button class="F_A10 unpressed" type="button" id="F_A10_low" onclick="runSimpleAnalysis(this.id)">A10 < 9</button>
-			  	<button class="F_A10 unpressed" type="button" id="F_A10_wnl" onclick="runSimpleAnalysis(this.id)">9 < A10 < 18</button>
+			  	<button class="F_A10 unpressed" type="button" id="F_A10_WNL" onclick="runSimpleAnalysis(this.id)">9 < A10 < 18</button>
 			  	<button class="F_A10 unpressed" type="button" id="F_A10_high" onclick="runSimpleAnalysis(this.id)">A10 > 18</button>
 		    </section>
 		    <section style=text-align:center>
@@ -146,6 +146,10 @@
 			  	<button class="F_MCF unpressed" type="button" id="F_MCF_WNL" onclick="runSimpleAnalysis(this.id)">MCF WNL</button>
 			  	<button class="F_MCF unpressed" type="button" id="F_MCF_high" onclick="runSimpleAnalysis(this.id)">MCF High</button>
 		    </section>
+		    <br>
+		    <section style=text-align:center>
+			  	<button class="unpressed" type="button" id="resetButton" onclick="reset()">RESET</button>
+		  	</section>
 		</div>
 	  </section>
 	  <br>
@@ -157,33 +161,7 @@
 	  	<button onclick="runAnalysis()"> Analyze! </button>
 	  </section>
 	</div>
-	  <!-- <section>
-		  <h2> Aptem Inputs </h2>
-		  <body>
-		  	<input id="aptem_CT"> CT </input><br>
-		  	<input id="aptem_A5"> A5 </input> <br>
-		  	<input id="aptem_A10"> A10 </input><br>
-		  	<input id="aptem_MCF"> MCF </input><br>
-		  	<input id="aptem_ML"> ML </input><br>
-		  	<input id="aptem_LI60"> LI60 </input><br>
 
-		  	<button onclick="myFunction()"> Analyze! </button>
-		  </body>
-	  </section>
-
-	  <section>
-		  <h2> Heptem Inputs </h2>
-		  <body>
-		  	<input id="heptem_CT"> CT </input><br>
-		  	<input id="heptem_A5"> A5 </input> <br>
-		  	<input id="heptem_A10"> A10 </input><br>
-		  	<input id="heptem_MCF"> MCF </input><br>
-		  	<input id="heptem_ML"> ML </input><br>
-		  	<input id="heptem_LI60"> LI60 </input><br>
-
-		  	<button onclick="myFunction()"> Analyze! </button>
-		  </body>
-	  </section> -->
   <body style=text-align:center>
   	<p id="output">  </p>
   </body>
