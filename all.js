@@ -254,7 +254,7 @@ function runSimpleAnalysis(input_button){
 		}	
 		// if(fibtem_A10 <= 9){
 		if(document.getElementById("F_A10_low").classList.contains("pressed_inputs")){	
-			recommendation +=  "If not active bleeding, give Cryoprecipitate <br>";
+			recommendation +=  "If not actively bleeding, give Cryoprecipitate <br>";
 		}
 	}
 	document.getElementById("output").innerHTML = recommendation;
