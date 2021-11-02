@@ -122,7 +122,7 @@ function runSimple(){
 		advancedAnalyzeButton.style.display = "none";
 
 		simpleInputsExtem.style.display = "inline";
-		// simpleInputsFibtem.style.display = "inline";
+		simpleInputsFibtem.style.display = "inline";
 
 	}
 
@@ -156,6 +156,7 @@ function runAdvanced(){
 		advancedAnalyzeButton.style.display = "inline";
 
 		simpleInputsExtem.style.display = "none";
+		simpleInputsFibtem.style.display = "none";
 
 	}
 	document.getElementById("output").innerHTML = "";
