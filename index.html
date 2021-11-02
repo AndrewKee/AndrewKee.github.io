@@ -11,12 +11,63 @@
 	</style>
   </head>
 
+<style>
+.unpressed {
+    border: 0;
+    width:130px;
+    line-height: 1.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 4px;
+    background-color: rgba(145, 145, 145, 1);
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+.pressed {
+	border: 0;
+	width:130px;
+    line-height: 1.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 4px;
+    background-color: rgba(125, 125, 125, 1);
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
 
+
+.pressed_inputs {
+	border: 0;
+	width:130px;
+    line-height: 1.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 4px;
+    background-color: rgba(0, 220, 215, 1);
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+</style>
 
   <h1 style=text-align:center> Quick Rotem Analysis </h1>
+  <section style=text-align:center>
+  	<button class="pressed" type="button" id="simpleButton" onclick="runSimple()">Simple</button>
+  	<button class="unpressed" type="button" id="advancedButton" onclick="runAdvanced()">Advanced</button>
+  </section>
+
 	  <section style=text-align:center>
 		  <h2 style=text-align:center> Extem Inputs </h2>
-		  <body>
+		  <div id="extemAdvanced" style="display:none">
 		  	<label for="extem_CT">EXTEM CT</label>
 		  	<input class="number" type=number pattern="\d*" placeholder="EXTEM CT" id="extem_CT"> </input> 
 		  	<input class="number" type=number pattern="\d*" placeholder="CT Lower" id="extem_CT_bound_l" value="43" disabled> </input> 
@@ -27,11 +78,10 @@
 		  	<input class="number" type=number pattern="\d*" placeholder="Alpha Lower" id="extem_alpha_bound_l" value="65" disabled>  </input>  
 		  	<input class="number" type=number pattern="\d*" placeholder="Alpha Upper" id="extem_alpha_bound_h" value="80" disabled>  </input>
 		  	<br>
-		  	<label style=width:50px for="extem_MCF">EXTEM MCF</label>
+		  	<label for="extem_MCF">EXTEM MCF</label>
 		  	<input class="number" type=number pattern="\d*" placeholder="EXTEM MCF" id="extem_MCF"> </input> 
 		  	<input class="number" type=number pattern="\d*" placeholder="MCF Lower"id="extem_MCF_bound_l" value="52" disabled>  </input> 
 		  	<input class="number" type=number pattern="\d*" placeholder="MCF Upper" id="extem_MCF_bound_h" value="70" disabled>  </input>
-		  	<br>
 		  	<!-- <label style=width:50px for="extem_ML">EXTEM ML</label>
 		  	<input class="number" type=number pattern="\d*"placeholder="EXTEM ML" id="extem_ML"> </input> 
 		  	<input class="number" type=number pattern="\d*"placeholder="ML Lower" id="extem_ML_bound_l">  </input> 
@@ -39,7 +89,25 @@
 		  	<br> -->
 
 		  	
-		  </body>
+		</div>
+		<div id="extemSimple">
+			<section style=text-align:center>
+			  	<button class="E_CT unpressed" type="button" id="E_CT_low" onclick="runSimpleAnalysis(this.id)">CT Low</button>
+			  	<button class="E_CT unpressed" type="button" id="E_CT_WNL" onclick="runSimpleAnalysis(this.id)">CT WNL</button>
+			  	<button class="E_CT unpressed" type="button" id="E_CT_high" onclick="runSimpleAnalysis(this.id)">CT High</button>
+		    </section>
+		    <section style=text-align:center>
+			  	<button class="E_Alpha unpressed" type="button" id="E_Alpha_low" onclick="runSimpleAnalysis(this.id)">&alpha; Low</button>
+			  	<button class="E_Alpha unpressed" type="button" id="E_Alpha_WNL" onclick="runSimpleAnalysis(this.id)">&alpha; WNL</button>
+			  	<button class="E_Alpha unpressed" type="button" id="E_Alpha_high" onclick="runSimpleAnalysis(this.id)">&alpha; High</button>
+		    </section>
+		    <section style=text-align:center>
+			  	<button class="E_MCF unpressed" type="button" id="E_MCF_low" onclick="runSimpleAnalysis(this.id)">MCF Low</button>
+			  	<button class="E_MCF unpressed" type="button" id="E_MCF_WNL" onclick="runSimpleAnalysis(this.id)">MCF WNL</button>
+			  	<button class="E_MCF unpressed" type="button" id="E_MCF_high" onclick="runSimpleAnalysis(this.id)">MCF High</button>
+		    </section>
+		</div>
+		<br>
 	  </section>
 
 <!-- 	  <section>
@@ -56,9 +124,9 @@
 		  </body>
 	  </section>
  -->
-	  <section style=text-align:center>
+	  <section style=text-align:center >
 		  <h2 style=text-align:center> Fibtem Inputs </h2>
-		  <body>
+		  <div id="fibtemAdvanced" style="display:none">
 		  	<label for="fibtem_a10">FIBTEM A10</label>
 		  	<input class="number" type=number pattern="\d*" placeholder="FIBTEM A10" id="fibtem_A10"> </input> 
 		  	<br>
@@ -66,19 +134,29 @@
 		  	<input class="number" type=number pattern="\d*" placeholder="FIBTEM MCF" id="fibtem_MCF"> </input>
 		  	<input class="number" type=number pattern="\d*" placeholder="MCF Lower" id="fibtem_MCF_bound_l" value="7" disabled>  </input>
 		  	<input class="number" type=number pattern="\d*" placeholder="MCF Upper" id="fibtem_MCF_bound_h" value="24" disabled></input>
-		  	<br>
-
-
-		  </body>
+		</div>
+		<div id="fibtemSimple">
+			<section style=text-align:center>
+			  	<button class="F_A10 unpressed" type="button" id="F_A10_low" onclick="runSimpleAnalysis(this.id)">A10 < 9</button>
+			  	<button class="F_A10 unpressed" type="button" id="F_A10_wnl" onclick="runSimpleAnalysis(this.id)">9 < A10 < 18</button>
+			  	<button class="F_A10 unpressed" type="button" id="F_A10_high" onclick="runSimpleAnalysis(this.id)">A10 > 18</button>
+		    </section>
+		    <section style=text-align:center>
+			  	<button class="F_MCF unpressed" type="button" id="F_MCF_low" onclick="runSimpleAnalysis(this.id)">MCF Low</button>
+			  	<button class="F_MCF unpressed" type="button" id="F_MCF_WNL" onclick="runSimpleAnalysis(this.id)">MCF WNL</button>
+			  	<button class="F_MCF unpressed" type="button" id="F_MCF_high" onclick="runSimpleAnalysis(this.id)">MCF High</button>
+		    </section>
+		</div>
 	  </section>
 	  <br>
 	  <br>
-
+	  <div id="advancedAnalyzeButton" style="display:none">
 	  <section style=text-align:center>
 	  	<input type="checkbox" id="edit_inputs" onclick="editBounds()"> 
 	  	<label for="edit_inputs"> Edit Upper and Lower Bounds </label><br>
 	  	<button onclick="runAnalysis()"> Analyze! </button>
 	  </section>
+	</div>
 	  <!-- <section>
 		  <h2> Aptem Inputs </h2>
 		  <body>
