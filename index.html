@@ -3,14 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <script type="text/javascript" src="all.js"></script>
   <head>
-    <title>Rotem Analysis</title>
-	  <style>
-		.number {
-			width:20%;
-		}
-	</style>
-  </head>
-  <!-- Google tag (gtag.js) -->
+  	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0VR6DPYVH5"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -19,6 +12,14 @@
 
 	  gtag('config', 'G-0VR6DPYVH5');
 	</script>
+    <title>Rotem Analysis</title>
+	  <style>
+		.number {
+			width:20%;
+		}
+	</style>
+  </head>
+  
 
 <style>
 .unpressed {
@@ -66,31 +67,35 @@
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
+.nozoom {
+	touch-action: manipulation;
+}
+
 </style>
 
   <h1 style=text-align:center> Quick Rotem Analysis </h1>
   <section style=text-align:center>
-  	<button class="pressed" type="button" id="simpleButton" onclick="runSimple()">Simple</button>
-  	<button class="unpressed" type="button" id="advancedButton" onclick="runAdvanced()">Advanced</button>
+  	<button class="pressed nozoom" type="button" id="simpleButton" onclick="runSimple()">Simple</button>
+  	<button class="unpressed nozoom" type="button" id="advancedButton" onclick="runAdvanced()">Advanced</button>
   </section>
 
 	  <section style=text-align:center>
 		  <h2 style=text-align:center> Extem Inputs </h2>
 		  <div id="extemAdvanced" style="display:none">
 		  	<label for="extem_CT">EXTEM CT</label>
-		  	<input class="number" type=number pattern="\d*" placeholder="EXTEM CT" id="extem_CT"> </input> 
-		  	<input class="number" type=number pattern="\d*" placeholder="CT Lower" id="extem_CT_bound_l" value="43" disabled> </input> 
-		  	<input class="number" type=number pattern="\d*" placeholder="CT Upper" id="extem_CT_bound_h" value="82" disabled> </input>
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="EXTEM CT" id="extem_CT"> </input> 
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="CT Lower" id="extem_CT_bound_l" value="43" disabled> </input> 
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="CT Upper" id="extem_CT_bound_h" value="82" disabled> </input>
 		  	<br>
 		  	<label for="extem_alpha">EXTEM Alpha</label>
-		  	<input class="number" type=number pattern="\d*" placeholder="EXTEM Alpha" id="extem_alpha"> </input> 
-		  	<input class="number" type=number pattern="\d*" placeholder="Alpha Lower" id="extem_alpha_bound_l" value="65" disabled>  </input>  
-		  	<input class="number" type=number pattern="\d*" placeholder="Alpha Upper" id="extem_alpha_bound_h" value="80" disabled>  </input>
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="EXTEM Alpha" id="extem_alpha"> </input> 
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="Alpha Lower" id="extem_alpha_bound_l" value="65" disabled>  </input>  
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="Alpha Upper" id="extem_alpha_bound_h" value="80" disabled>  </input>
 		  	<br>
 		  	<label for="extem_MCF">EXTEM MCF</label>
-		  	<input class="number" type=number pattern="\d*" placeholder="EXTEM MCF" id="extem_MCF"> </input> 
-		  	<input class="number" type=number pattern="\d*" placeholder="MCF Lower"id="extem_MCF_bound_l" value="52" disabled>  </input> 
-		  	<input class="number" type=number pattern="\d*" placeholder="MCF Upper" id="extem_MCF_bound_h" value="70" disabled>  </input>
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="EXTEM MCF" id="extem_MCF"> </input> 
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="MCF Lower"id="extem_MCF_bound_l" value="52" disabled>  </input> 
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="MCF Upper" id="extem_MCF_bound_h" value="70" disabled>  </input>
 		  	<!-- <label style=width:50px for="extem_ML">EXTEM ML</label>
 		  	<input class="number" type=number pattern="\d*"placeholder="EXTEM ML" id="extem_ML"> </input> 
 		  	<input class="number" type=number pattern="\d*"placeholder="ML Lower" id="extem_ML_bound_l">  </input> 
@@ -101,19 +106,19 @@
 		</div>
 		<div id="extemSimple">
 			<section style=text-align:center>
-			  	<button class="E_CT unpressed" type="button" id="E_CT_low" onclick="runSimpleAnalysis(this.id)">CT Low</button>
-			  	<button class="E_CT unpressed" type="button" id="E_CT_WNL" onclick="runSimpleAnalysis(this.id)">CT WNL</button>
-			  	<button class="E_CT unpressed" type="button" id="E_CT_high" onclick="runSimpleAnalysis(this.id)">CT High</button>
+			  	<button class="E_CT unpressed nozoom" type="button" id="E_CT_low" onclick="runSimpleAnalysis(this.id)">CT Low</button>
+			  	<button class="E_CT unpressed nozoom" type="button" id="E_CT_WNL" onclick="runSimpleAnalysis(this.id)">CT WNL</button>
+			  	<button class="E_CT unpressed nozoom" type="button" id="E_CT_high" onclick="runSimpleAnalysis(this.id)">CT High</button>
 		    </section>
 		    <section style=text-align:center>
-			  	<button class="E_Alpha unpressed" type="button" id="E_Alpha_low" onclick="runSimpleAnalysis(this.id)">&alpha; Low</button>
-			  	<button class="E_Alpha unpressed" type="button" id="E_Alpha_WNL" onclick="runSimpleAnalysis(this.id)">&alpha; WNL</button>
-			  	<button class="E_Alpha unpressed" type="button" id="E_Alpha_high" onclick="runSimpleAnalysis(this.id)">&alpha; High</button>
+			  	<button class="E_Alpha unpressed nozoom" type="button" id="E_Alpha_low" onclick="runSimpleAnalysis(this.id)">&alpha; Low</button>
+			  	<button class="E_Alpha unpressed nozoom" type="button" id="E_Alpha_WNL" onclick="runSimpleAnalysis(this.id)">&alpha; WNL</button>
+			  	<button class="E_Alpha unpressed nozoom" type="button" id="E_Alpha_high" onclick="runSimpleAnalysis(this.id)">&alpha; High</button>
 		    </section>
 		    <section style=text-align:center>
-			  	<button class="E_MCF unpressed" type="button" id="E_MCF_low" onclick="runSimpleAnalysis(this.id)">MCF Low</button>
-			  	<button class="E_MCF unpressed" type="button" id="E_MCF_WNL" onclick="runSimpleAnalysis(this.id)">MCF WNL</button>
-			  	<button class="E_MCF unpressed" type="button" id="E_MCF_high" onclick="runSimpleAnalysis(this.id)">MCF High</button>
+			  	<button class="E_MCF unpressed nozoom" type="button" id="E_MCF_low" onclick="runSimpleAnalysis(this.id)">MCF Low</button>
+			  	<button class="E_MCF unpressed nozoom" type="button" id="E_MCF_WNL" onclick="runSimpleAnalysis(this.id)">MCF WNL</button>
+			  	<button class="E_MCF unpressed nozoom" type="button" id="E_MCF_high" onclick="runSimpleAnalysis(this.id)">MCF High</button>
 		    </section>
 		</div>
 		<br>
@@ -137,27 +142,27 @@
 		  <h2 style=text-align:center> Fibtem Inputs </h2>
 		  <div id="fibtemAdvanced" style="display:none">
 		  	<label for="fibtem_a10">FIBTEM A10</label>
-		  	<input class="number" type=number pattern="\d*" placeholder="FIBTEM A10" id="fibtem_A10"> </input> 
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="FIBTEM A10" id="fibtem_A10"> </input> 
 		  	<br>
 		  	<label for="fibtem_MCF">FIBTEM MCF</label>
-		  	<input class="number" type=number pattern="\d*" placeholder="FIBTEM MCF" id="fibtem_MCF"> </input>
-		  	<input class="number" type=number pattern="\d*" placeholder="MCF Lower" id="fibtem_MCF_bound_l" value="7" disabled>  </input>
-		  	<input class="number" type=number pattern="\d*" placeholder="MCF Upper" id="fibtem_MCF_bound_h" value="24" disabled></input>
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="FIBTEM MCF" id="fibtem_MCF"> </input>
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="MCF Lower" id="fibtem_MCF_bound_l" value="7" disabled>  </input>
+		  	<input class="number nozoom" type=number pattern="\d*" placeholder="MCF Upper" id="fibtem_MCF_bound_h" value="24" disabled></input>
 		</div>
 		<div id="fibtemSimple">
 			<section style=text-align:center>
-			  	<button class="F_A10 unpressed" type="button" id="F_A10_low" onclick="runSimpleAnalysis(this.id)">A10 < 9</button>
-			  	<button class="F_A10 unpressed" type="button" id="F_A10_WNL" onclick="runSimpleAnalysis(this.id)">9 < A10 < 18</button>
-			  	<button class="F_A10 unpressed" type="button" id="F_A10_high" onclick="runSimpleAnalysis(this.id)">A10 > 18</button>
+			  	<button class="F_A10 unpressed nozoom" type="button" id="F_A10_low" onclick="runSimpleAnalysis(this.id)">A10 < 9</button>
+			  	<button class="F_A10 unpressed nozoom" type="button" id="F_A10_WNL" onclick="runSimpleAnalysis(this.id)">9 < A10 < 18</button>
+			  	<button class="F_A10 unpressed nozoom" type="button" id="F_A10_high" onclick="runSimpleAnalysis(this.id)">A10 > 18</button>
 		    </section>
 		    <section style=text-align:center>
-			  	<button class="F_MCF unpressed" type="button" id="F_MCF_low" onclick="runSimpleAnalysis(this.id)">MCF Low</button>
-			  	<button class="F_MCF unpressed" type="button" id="F_MCF_WNL" onclick="runSimpleAnalysis(this.id)">MCF WNL</button>
-			  	<button class="F_MCF unpressed" type="button" id="F_MCF_high" onclick="runSimpleAnalysis(this.id)">MCF High</button>
+			  	<button class="F_MCF unpressed nozoom" type="button" id="F_MCF_low" onclick="runSimpleAnalysis(this.id)">MCF Low</button>
+			  	<button class="F_MCF unpressed nozoom" type="button" id="F_MCF_WNL" onclick="runSimpleAnalysis(this.id)">MCF WNL</button>
+			  	<button class="F_MCF unpressed nozoom" type="button" id="F_MCF_high" onclick="runSimpleAnalysis(this.id)">MCF High</button>
 		    </section>
 		    <br>
 		    <section style=text-align:center>
-			  	<button class="unpressed" type="button" id="resetButton" onclick="reset()">RESET</button>
+			  	<button class="unpressed nozoom" type="button" id="resetButton" onclick="reset()">RESET</button>
 		  	</section>
 		</div>
 	  </section>
