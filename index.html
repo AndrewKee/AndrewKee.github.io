@@ -74,12 +74,12 @@
 </style>
 
   <h1 style=text-align:center> Quick Rotem Analysis </h1>
-  <section style=text-align:center>
+  <section style=text-align:center; touch-action: manipulation>
   	<button class="pressed nozoom" type="button" id="simpleButton" onclick="runSimple()">Simple</button>
   	<button class="unpressed nozoom" type="button" id="advancedButton" onclick="runAdvanced()">Advanced</button>
   </section>
 
-	  <section style=text-align:center>
+	  <section style=text-align:center; touch-action: manipulation >
 		  <h2 style=text-align:center> Extem Inputs </h2>
 		  <div id="extemAdvanced" style="display:none">
 		  	<label for="extem_CT">EXTEM CT</label>
@@ -104,18 +104,18 @@
 
 		  	
 		</div>
-		<div id="extemSimple">
+		<div id="extemSimple" style=touch-action: manipulation>
 			<section style=text-align:center>
 			  	<button class="E_CT unpressed nozoom" type="button" id="E_CT_low" onclick="runSimpleAnalysis(this.id)">CT Low</button>
 			  	<button class="E_CT unpressed nozoom" type="button" id="E_CT_WNL" onclick="runSimpleAnalysis(this.id)">CT WNL</button>
 			  	<button class="E_CT unpressed nozoom" type="button" id="E_CT_high" onclick="runSimpleAnalysis(this.id)">CT High</button>
 		    </section>
-		    <section style=text-align:center>
+		    <section style=text-align:center style=touch-action: manipulation>
 			  	<button class="E_Alpha unpressed nozoom" type="button" id="E_Alpha_low" onclick="runSimpleAnalysis(this.id)">&alpha; Low</button>
 			  	<button class="E_Alpha unpressed nozoom" type="button" id="E_Alpha_WNL" onclick="runSimpleAnalysis(this.id)">&alpha; WNL</button>
 			  	<button class="E_Alpha unpressed nozoom" type="button" id="E_Alpha_high" onclick="runSimpleAnalysis(this.id)">&alpha; High</button>
 		    </section>
-		    <section style=text-align:center>
+		    <section style=text-align:center style=touch-action: manipulation>
 			  	<button class="E_MCF unpressed nozoom" type="button" id="E_MCF_low" onclick="runSimpleAnalysis(this.id)">MCF Low</button>
 			  	<button class="E_MCF unpressed nozoom" type="button" id="E_MCF_WNL" onclick="runSimpleAnalysis(this.id)">MCF WNL</button>
 			  	<button class="E_MCF unpressed nozoom" type="button" id="E_MCF_high" onclick="runSimpleAnalysis(this.id)">MCF High</button>
@@ -138,7 +138,7 @@
 		  </body>
 	  </section>
  -->
-	  <section style=text-align:center >
+	  <section style=text-align:center;touch-action: manipulation>
 		  <h2 style=text-align:center> Fibtem Inputs </h2>
 		  <div id="fibtemAdvanced" style="display:none">
 		  	<label for="fibtem_a10">FIBTEM A10</label>
@@ -149,7 +149,7 @@
 		  	<input class="number nozoom" type=number pattern="\d*" placeholder="MCF Lower" id="fibtem_MCF_bound_l" value="7" disabled>  </input>
 		  	<input class="number nozoom" type=number pattern="\d*" placeholder="MCF Upper" id="fibtem_MCF_bound_h" value="24" disabled></input>
 		</div>
-		<div id="fibtemSimple">
+		<div id="fibtemSimple" style=touch-action: manipulation>
 			<section style=text-align:center>
 			  	<button class="F_A10 unpressed nozoom" type="button" id="F_A10_low" onclick="runSimpleAnalysis(this.id)">A10 < 9</button>
 			  	<button class="F_A10 unpressed nozoom" type="button" id="F_A10_WNL" onclick="runSimpleAnalysis(this.id)">9 < A10 < 18</button>
@@ -168,7 +168,7 @@
 	  </section>
 	  <br>
 	  <br>
-	  <div id="advancedAnalyzeButton" style="display:none">
+	  <div id="advancedAnalyzeButton" style="display:none" >
 	  <section style=text-align:center>
 	  	<input type="checkbox" id="edit_inputs" onclick="editBounds()"> 
 	  	<label for="edit_inputs"> Edit Upper and Lower Bounds </label><br>
